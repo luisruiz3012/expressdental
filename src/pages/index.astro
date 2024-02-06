@@ -1,0 +1,102 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../UI/Section.astro';
+import Reason from '../components/Reason.astro';
+---
+
+<MainLayout title='Express Dental | Inicio'>
+  <Hero />
+
+  <Section>
+    <h3 class='text-center mb-12 font-semibold text-5xl lg:text-6xl'>
+      Acerca de nosotros
+    </h3>
+    <p class='text-pretty md:text-justify text-lg'>
+      En el corazón de nuestra clínica dental, nos encontramos comprometidos con
+      la creencia de que cada sonrisa es única y merece atención personalizada
+      de la más alta calidad. Fundada con la visión de crear un espacio donde la
+      excelencia odontológica se encuentra con la compasión, nuestra clínica se
+      ha convertido en un faro de cuidado dental excepcional.
+
+      <br />
+      <br />
+
+      Desde nuestros humildes comienzos, hemos evolucionado para convertirnos en
+      un centro líder en odontología, respaldado por un equipo apasionado de
+      profesionales altamente calificados. Cada miembro de nuestro equipo
+      comparte una dedicación inquebrantable a la salud bucal y al bienestar
+      general de nuestros pacientes.
+    </p>
+
+    <div class='mt-14 flex flex-wrap lg:flex-nowrap w-full gap-4'>
+      <img
+        src='/images/clinic.jpg'
+        alt='clinic'
+        class='w-full lg:w-2/4 h-full rounded-md'
+        loading='lazy'
+        decoding='async'
+      />
+      <img
+        src='/images/reception.jpg'
+        alt='reception'
+        class='w-full lg:w-2/4 h-full rounded-md'
+        loading='lazy'
+        decoding='async'
+      />
+    </div>
+  </Section>
+
+  <section class='team bg-fixed bg-cover lg:bg-inherit'>
+    <div
+      class='py-20 px-14 flex flex-col items-center justify-center min-h-[90vh] lg:px-24 text-white bg-blue-700 z-10 bg-opacity-55'
+    >
+      <h3 class='text-5xl lg:text-6xl font-semibold text-center mb-10'>
+        Nuestro equipo
+      </h3>
+      <p class='text-pretty md:text-justify'>
+        En el corazón de Express Dental, se encuentra un equipo dedicado de
+        profesionales apasionados por la salud bucal y el bienestar de nuestros
+        pacientes. Nuestro equipo no solo está compuesto por expertos en
+        odontología, sino también por individuos comprometidos con proporcionar
+        una atención personalizada y compassiva.
+        <br />
+        <br />
+        Nuestro equipo no es solo un grupo de profesionales; somos una familia dedicada
+        a hacer que cada visita sea una experiencia positiva y constructiva. Nos
+        enorgullece construir relaciones a largo plazo con nuestros pacientes, apoyándolos
+        en cada paso de su viaje dental.
+      </p>
+    </div>
+  </section>
+
+  <Section>
+    <h3 class='text-center text-5xl lg:text-6xl font-semibold'>
+      ¿Por que elegirnos?
+    </h3>
+
+    <p class='my-10 text-pretty md:text-justify'>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, ullam
+      corporis explicabo odit dolor molestias voluptatem modi exercitationem
+      repellendus sapiente dignissimos, numquam fugiat beatae laudantium dolores
+      omnis atque commodi maxime.
+    </p>
+
+    <section
+      class='flex flex-col lg:flex-row gap-20 items-center justify-evenly mt-20 flex-wrap'
+    >
+      <Reason iconName='mdi:computer' title='Tecnologia de punta' />
+      <Reason iconName='mdi:money' title='Facilidades de pago' />
+      <Reason iconName='mdi:star' title='Satisfaccion del cliente' />
+      <Reason iconName='mdi:person' title='Personal altamente calificado' />
+      <Reason iconName='mdi:briefcase-person' title='+10 años de experiencia' />
+    </section>
+  </Section>
+</MainLayout>
+
+<style scoped>
+  .team {
+    background-image: url('/images/team.webp');
+    background-repeat: no-repeat;
+  }
+</style>
