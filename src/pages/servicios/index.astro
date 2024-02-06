@@ -1,0 +1,45 @@
+---
+import Article from '../../components/Article.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../UI/Section.astro';
+---
+
+<MainLayout title='Express Dental | Servicios'>
+  <Section>
+    <h1 class='font-semibold text-5xl text-center lg:text-justify lg:text-6xl'>
+      Servicios
+    </h1>
+
+    <p class='text-balance my-12 md:text-justify md:text-pretty'>
+      En Express Dental, nos enorgullece ofrecer una gama completa de servicios
+      diseñados para transformar tu experiencia odontológica. Desde la búsqueda
+      de una sonrisa más brillante hasta la restauración completa de la función
+      dental, nuestro equipo de profesionales altamente capacitados está aquí
+      para proporcionar atención personalizada y resultados excepcionales.
+    </p>
+
+    <section class='flex gap-10 flex-col justify-center items-center'>
+      <Article
+        title='Blanqueamiento Dental'
+        description='Logra una sonrisa deslumbrante con nuestro servicio de blanqueamiento dental avanzado, que elimina manchas y decoloraciones, devolviéndote una sonrisa radiante y confiada.'
+        image='https://mdentalaser.com/wp-content/uploads/2019/12/tips-para-blanqueamiento-dental.png'
+        calendly='https://calendly.com/luisdiegoaguilarr/'
+        href='/servicios/blanqueamiento-dental'
+      />
+      <Article
+        title='Implantes Dentales'
+        description='Recupera la funcionalidad y estética dental con nuestros implantes dentales de alta calidad. Una solución duradera para reemplazar dientes perdidos y restaurar tu sonrisa natural.'
+        image='https://esteticadentofacial.life/wp-content/uploads/2023/03/Implante-Dentales-sonrisa-768x483.jpg'
+        calendly='https://calendly.com/luisdiegoaguilarr/'
+        href='/servicios/implantes-dentales'
+      />
+      <Article
+        title='Odontología Cosmética'
+        description='Resalta tu belleza natural con nuestros tratamientos de odontología cosmética. Desde carillas hasta remodelación de encías, mejoramos tu sonrisa para que refleje tu verdadera radiancia.'
+        image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg3taeGIZ-dPUQtBLpz-Tx6h5eoSRtiUpsFw&usqp=CAU'
+        calendly='https://calendly.com/luisdiegoaguilarr/'
+        href='/servicios/odontologia-cosmetica'
+      />
+    </section>
+  </Section>
+</MainLayout>

@@ -1,0 +1,9 @@
+---
+import { Icon } from 'astro-icon/components';
+const { iconName, title } = Astro.props;
+---
+
+<article class='flex flex-col items-center justify-center w-1/4'>
+  <Icon name={iconName} class='text-6xl lg:text-9xl' />
+  <span class='text-center mt-2 font-semibold text-2xl'>{title}</span>
+</article>

@@ -1,0 +1,51 @@
+---
+import NavLink from './NavLink.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<script>
+  const button = document.getElementById('hamburger-menu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  button.addEventListener('click', function () {
+    let isHidden = mobileMenu.classList.contains('hidden');
+
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+    } else {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+    }
+  });
+</script>
+
+<header
+  class='bg-white text-gray-600 px-6 py-4 shadow-md h-24 z-40 flex items-center justify-between sticky top-0'
+>
+  <div>
+    <a href='/'>
+      <img class='h-20 w-20' src='/images/logo.webp' alt='logo' />
+    </a>
+  </div>
+  <nav class='hidden lg:flex'>
+    <ul class='flex items-center justify-evenly gap-5'>
+      <NavLink name='inicio' url='/' />
+      <NavLink name='servicios' url='/servicios' />
+      <NavLink name='contacto' url='/contacto' />
+    </ul>
+  </nav>
+
+  <span class='lg:hidden cursor-pointer' id='hamburger-menu'>
+    <Icon name='mdi:menu' class='text-3xl md:text-4xl text-gray-500' />
+  </span>
+</header>
+
+<ul
+  id='mobileMenu'
+  class='hidden w-full h-screen bg-white py-20 px-5 z-50 fixed items-center flex-col gap-12 text-2xl md:text-4xl md:gap-20 md:py-32'
+>
+  <NavLink name='inicio' url='/' />
+  <NavLink name='servicios' url='/servicios' />
+  <NavLink name='contacto' url='/contacto' />
+</ul>

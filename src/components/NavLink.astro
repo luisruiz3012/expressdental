@@ -1,0 +1,14 @@
+---
+const { name, url } = Astro.props;
+const currentUrl = Astro.url['pathname'];
+
+const styles =
+  currentUrl === url
+    ? 'text-blue-500 font-semibold underline'
+    : 'text-gray-600 font-italic';
+---
+
+<li>
+  <a class={styles} href={url}>{name.charAt(0).toUpperCase() + name.slice(1)}</a
+  >
+</li>

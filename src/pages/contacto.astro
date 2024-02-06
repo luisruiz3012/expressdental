@@ -1,0 +1,95 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../UI/Section.astro';
+---
+
+<MainLayout>
+  <Section>
+    <h1 class='text-5xl md:text-6xl font-semibold'>Estamos aquí para ti</h1>
+    <p class='my-10 md:text-pretty md:text-justify'>
+      Ya sea que estés listo para programar una cita, tengas consultas sobre
+      nuestros servicios o simplemente quieras saber más sobre nosotros,
+      ¡estamos aquí para escucharte! En nuestra clínica, tu satisfacción y
+      comodidad son nuestra prioridad número uno. Puedes contactarnos al
+
+      <section class='flex flex-col lg:flex-row gap-10'>
+        <section class='w-full'>
+          <span class='font-semibold text-2xl'>Envianos tu consulta</span>
+          <form action='' class='flex flex-col gap-8 text-gray-600 w-full mt-8'>
+            <div class='flex flex-col'>
+              <label>Nombre completo:</label>
+              <input
+                type='text'
+                name='Nombre completo'
+                id=''
+                class='border border-gray-600 rounded-lg px-2 text-base py-1'
+              />
+            </div>
+
+            <div class='flex flex-col'>
+              <label>Correo electronico:</label>
+              <input
+                type='email'
+                name='Correo electronico'
+                id=''
+                class='border border-gray-600 rounded-lg px-2 text-base py-1'
+              />
+            </div>
+
+            <div class='flex flex-col'>
+              <label>Numero de telefono:</label>
+              <input
+                type='text'
+                name='Numero de telefono'
+                id=''
+                class='border border-gray-600 rounded-lg px-2 text-base py-1'
+              />
+            </div>
+
+            <div class='flex flex-col'>
+              <label>Tu consulta:</label>
+              <textarea
+                name='Consulta'
+                id=''
+                rows='4'
+                class='border border-gray-600 rounded-lg px-2 text-base py-1'
+              ></textarea>
+            </div>
+            <button class='bg-gray-900 text-white py-2 rounded-full'
+              >Enviar</button
+            >
+          </form>
+        </section>
+
+        <section class='w-full'>
+          <div class='mb-5 text-base'>
+            <h2 class='font-semibold text-2xl mb-5'>Informacion de contacto</h2>
+            <p><span class='font-bold'>Telefono:</span> +502 1234-5678</p>
+            <p>
+              <span class='font-bold'>Correo electronico:</span> expressdental@email.com
+            </p>
+            <p>
+              <span class='font-bold'>Direccion:</span> 123 S Main Street, Ciudad
+              de Guatemala
+            </p>
+          </div>
+
+          <hr class='border border-gray-300' />
+
+          <h3 class='my-5 font-semibold text-2xl'>Horarios:</h3>
+          <p class='text-base'>
+            <span class='font-semibold'>Lunes a viernes:</span> 9:00 am - 7:00 pm
+            <br />
+            <span class='font-semibold'>Sabados:</span> 9:00 am - 2:00 pm
+          </p>
+          <iframe
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8149146491737!2d-90.45635192538901!3d14.55257438592806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a531e200cdbd%3A0xcd71c2ed60c5d8ba!2sPradera%20Concepci%C3%B3n!5e0!3m2!1ses-419!2sgt!4v1707170146128!5m2!1ses-419!2sgt'
+            class='w-full h-64'
+            style='border:0;'
+            allowfullscreen=''
+            referrerpolicy='no-referrer-when-downgrade'></iframe>
+        </section>
+      </section>
+    </p>
+  </Section>
+</MainLayout>

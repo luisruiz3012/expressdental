@@ -1,0 +1,23 @@
+---
+import Section from '../UI/Section.astro';
+import MainLayout from './MainLayout.astro';
+
+const { title } = Astro.props;
+---
+
+<MainLayout>
+  <Section>
+    <div
+      class='flex items-center justify-between mb-12 flex-col md:flex-row gap-10'
+    >
+      <h1 class='text-4xl md:text-6xl font-semibold'>{title}</h1>
+      <a
+        href='https://calendly.com/luisdiegoaguilarr/'
+        class='border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-full px-6 py-2 hover:font-semibold'
+        >Agendar una cita</a
+      >
+    </div>
+
+    <slot />
+  </Section>
+</MainLayout>
